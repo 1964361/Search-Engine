@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fire Search</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #111;
+        color: #fff;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff5733; /* Flame color */
+      }
+      p {
+        text-align: center;
+        color: #ff5733; /* Flame color */
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        color: #ff5733;
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        background-color: #555;
+        color: #fff;
+        border: 1px solid #888;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #ff5733; /* Flame color */
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ff6f47; /* Slightly lighter flame color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fire Search 🔥</h1>
+    <p><b>Please don't abuse this site!</b></p>
+
+    <form action="#" method="post" onsubmit="searchWebsite(); return false;">
+      <label for="website">Select Website:</label>
+      <select id="website" name="website">
+        <option value="canvas">Canvas</option>
+        <option value="chatgpt">ChatGPT</option>
+        <option value="fire writer">Fire Writer</option>
+        <option value="fire calculator">Fire Calculator</option>
+        <option value="games">Games</option>
+        <option value="google">Google</option>
+        <option value="google translate">Google Translate</option>
+        <option value="help">Help</option>
+        <option value="music">Music</option>
+        <option value="nitro type">Nitro Type</option>
+        <option value="youtube">YouTube</option>
+      </select>
+
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" required />
+
+      <input type="submit" value="Search" />
+    </form>
+
+    <script>
+      function searchWebsite() {
+        var website = document.getElementById("website").value;
+        var searchQuery = document.getElementById("search").value;
+
+        if (website === "google") {
+          window.open("https://www.google.com/search?q=" + searchQuery);
+        } else if (website === "youtube") {
+          window.open(
+            "https://www.youtube.com/results?search_query=" + searchQuery
+          );
+        } else if (website === "music") {
+          window.open("https://beatbump.io/search/" + searchQuery);
+        } else if (website === "canvas") {
+          window.open("https://canvas.houstonisd.org/");
+        } else if (website === "chatgpt") {
+          window.open("https://chat.openai.com/");
+        } else if (website === "help") {
+          window.open("https://pv4stl.csb.app/");
+        } else if (website === "google translate") {
+          window.open("https://translate.google.com/");
+        } else if (website === "fire writer") {
+          window.open("https://sc22r5.csb.app/");
+        } else if (website === "fire calculator") {
+          window.open("https://prcq7n.csb.app/");
+        } else if (website === "nitro type") {
+          window.open("https://www.nitrotype.com/garage");
+        } else if (website === "games") {
+          window.open("https://galatic.hop.sh/");
+        }
+      }
+    </script>
+  </body>
+</html>
