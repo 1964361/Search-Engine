@@ -79,6 +79,7 @@
         <option value="help">Help</option>
         <option value="music">Music</option>
         <option value="nitro type">Nitro Type</option>
+       <option value="wikipedia">Wikipedia</option>
         <option value="youtube">YouTube</option>
       </select>
 
@@ -99,6 +100,10 @@
           window.open(
             "https://www.youtube.com/results?search_query=" + searchQuery
           );
+          
+        if (website === "wikipedia") {
+          window.open("https://en.wikipedia.org/wiki/" + searchQuery);
+          
         } else if (website === "music") {
           window.open("https://beatbump.io/search/" + searchQuery);
         } else if (website === "canvas") {
