@@ -1,79 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="downloads/x-icon" href="/Downloads/favicon.ico">
-    <title>Fire Search</title>
+    <title>Loading - Fire Search</title>
     <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #ffffff; /* white */
-        color: #ffffff; /* white */
-        margin: 20px;
-        background-image: linear-gradient(90deg, #161578, #b81055);
-      }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* white */
+            color: #ffffff; /* white */
+            margin: 0;
+            overflow: hidden;
+        }
 
-      h1 {
-        text-align: center;
-        color: #ff5733; /* Flame color */
-      }
-      h2 {
-        text-align: center;
-         position: absolute; 
-        overflow: hidden;
-      } 
-      p {
-        text-align: center;
-        color: #ff5733; /* Flame color */
-      }
+        #loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #161578, #b81055);
+            animation: fadeIn 1s ease-out;
+        }
 
-      form {
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: #333;
-        padding: 20px;
-        border-radius: 20px;
-        position: relative;
-      }
+        #loading-spinner {
+            border: 8px solid #fff;
+            border-top: 8px solid #ff5733; /* Flame color */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-      label {
-        display: block;
-        margin-top: 10px;
-        color: #ff5733; /* Flame color */
-      }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
-      select,
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        background-color: #555;
-        color: #fff;
-        border: 1px solid #888;
-        border-radius: 5px;
-      }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-      input[type="submit"] {
-        background-color: #ff5733; /* Flame color */
-        color: white;
-        cursor: pointer;
-      }
+        /* Hide the content until the page is fully loaded */
+        body > * {
+            display: none;
+        }
 
-      input[type="submit"]:hover {
-        background-color: #ff6f47; /* Slightly lighter flame color on hover */
-      }
+        h1,
+        h2,
+        p,
+        form,
+        script {
+            display: block; /* Display the content */
+        }
+
+        body {
+            background-image: linear-gradient(90deg, #161578, #b81055);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff5733; /* Flame color */
+        }
+
+        h2 {
+            text-align: center;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        p {
+            text-align: center;
+            color: #ff5733; /* Flame color */
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #ff5733; /* Flame color */
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            background-color: #555;
+            color: #fff;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff5733; /* Flame color */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff6f47; /* Slightly lighter flame color on hover */
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <div id="loading-container">
+        <div id="loading-spinner"></div>
+    </div>
+
     <h1><span style="font-size: 100px">🔥 Fire Search 🔥</span></h1>
     <h2><span style="font-size: 475px">🔥 🔥 </span></h2>
     <p><b>Please don't abuse this site!</b></p>
 
-
     <form action="#" method="post" onsubmit="searchWebsite(); return false;">
+        <label for="website">Select Website:</label>
+        <select id="website" name="website">
+            <option value="canvas">Canvas</option>
+            <option value="capcut">Capcut</option>
+            <!-- Add other options as needed -->
+        </select>
+
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" required />
+
+        <input type="submit" value="Search" />
+    </form>
+
+    <p><b>*The 🔥 symbol means I made it</b></p>
+
+    <script>
+        function searchWebsite() {
+            var website = document.getElementById("website").value;
+            var searchQuery = document.getElementById("search").value;
+
+            // Your existing searchWebsite function code here
+              <form action="#" method="post" onsubmit="searchWebsite(); return false;">
       <label for="website">Select Website:</label>
       <select id="website" name="website">
         <option value="canvas">Canvas</option>
@@ -155,8 +239,14 @@
           } else if (website === "fire translate") {
           window.open("https://firetranslate.netlify.app/");
 
+            // Simulate a delay to showcase the loading animation
+            setTimeout(function () {
+                // Remove the loading container and display the content
+                document.getElementById("loading-container").style.display = "none";
+                document.body.style.overflow = "auto"; // Enable scrolling
+                document.body.style.display = "block"; // Display the main content
+            }, 2000); // Adjust the delay time as needed
         }
-      }
     </script>
-  </body>
+</body>
 </html>
