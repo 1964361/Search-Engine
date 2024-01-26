@@ -140,7 +140,24 @@
         <select id="website" name="website">
             <option value="canvas">Canvas</option>
             <option value="capcut">Capcut</option>
-            <!-- Add other options as needed -->
+            <option value="chatgpt">ChatGPT</option>
+            <option value="fire wall game">Crack the Fire Wall Game 🔥</option>
+            <option value="espn">ESPN</option>
+            <option value="fire calculator">Fire Calculator 🔥</option>
+            <option value="fire says">Fire Says 🔥</option>
+            <option value="fire translate">Fire Translate 🔥</option>
+            <option value="fire writer">Fire Writer 🔥</option>
+            <option value="games">Games</option>
+            <option value="coding">Github</option>
+            <option value="google">Google</option>
+            <option value="google translate">Google Translate</option>
+            <option value="help">Help 🔥</option>
+            <option value="music">Music</option>
+            <option value="nitro type">Nitro Type</option>
+            <option value="firetexttospeech">Fire Text to Speech 🔥</option>
+            <option value="weekly quiz">Weekly Quiz 🔥</option>
+            <option value="wikipedia">Wikipedia</option>
+            <option value="youtube">YouTube</option>
         </select>
 
         <label for="search">Search:</label>
@@ -156,89 +173,50 @@
             var website = document.getElementById("website").value;
             var searchQuery = document.getElementById("search").value;
 
-            // Your existing searchWebsite function code here
-              <form action="#" method="post" onsubmit="searchWebsite(); return false;">
-      <label for="website">Select Website:</label>
-      <select id="website" name="website">
-        <option value="canvas">Canvas</option>
-        <option value="capcut">Capcut</option>
-        <option value="chatgpt">ChatGPT</option>
-        <option value="fire wall game">Crack the Fire Wall Game 🔥</option>
-        <option value="espn">ESPN</option>
-        <option value="fire calculator">Fire Calculator 🔥</option>
-        <option value="fire says">Fire Says 🔥</option>
-        <option value="fire translate">Fire Translate 🔥</option>
-        <option value="fire writer">Fire Writer 🔥</option>
-        <option value="games">Games</option>
-        <option value="coding">Github</option>
-        <option value="google">Google</option>
-        <option value="google translate">Google Translate</option>
-        <option value="help">Help 🔥</option>
-        <option value="music">Music</option>
-        <option value="nitro type">Nitro Type</option>
-        <option value="firetexttospeech">Fire Text to Speech 🔥</option>
-        <option value="weekly quiz">Weekly Quiz 🔥</option>
-       <option value="wikipedia">Wikipedia</option>
-        <option value="youtube">YouTube</option>
-      </select>
+            if (website === "google") {
+                window.open("https://www.google.com/search?q=" + searchQuery);
+            } else if (website === "youtube") {
+                window.open("https://www.youtube.com/results?search_query=" + searchQuery);
+            } else if (website === "wikipedia") {
+                window.open("https://en.wikipedia.org/wiki/" + searchQuery);
+            } else if (website === "music") {
+                window.open("https://beatbump.io/search/" + searchQuery);
+            } else if (website === "canvas") {
+                window.open("https://canvas.houstonisd.org/");
+            } else if (website === "chatgpt") {
+                window.open("https://chat.openai.com/");
+            } else if (website === "help") {
+                window.open("https://pv4stl.csb.app/");
+            } else if (website === "google translate") {
+                window.open("https://translate.google.com/");
+            } else if (website === "fire writer") {
+                window.open("https://sc22r5.csb.app/");
+            } else if (website === "fire calculator") {
+                window.open("https://prcq7n.csb.app/");
+            } else if (website === "nitro type") {
+                window.open("https://www.nitrotype.com/garage");
+            } else if (website === "games") {
+                window.open("https://55gms.net/");
+            } else if (website === "capcut") {
+                window.open("https://www.capcut.com/my-edit?start_tab=video");
+            } else if (website === "coding") {
+                window.open("https://github.com/");
+            } else if (website === "espn") {
+                window.open("https://www.espn.com/");
+            } else if (website === "weekly quiz") {
+                window.open("https://7fxjy4.csb.app/");
+            } else if (website === "firetexttospeech") {
+                window.open("https://fireaitalker.netlify.app/");
+            } else if (website === "fire says") {
+                window.open("https://firesays.netlify.app/");
+            } else if (website === "fire wall game") {
+                window.open("https://firewallgame.netlify.app/");
+            } else if (website === "fire translate") {
+                window.open("https://firetranslate.netlify.app/");
+            }
+        }
 
-      <label for="search">Search:</label>
-      <input type="text" id="search" name="search" required />
-
-      <input type="submit" value="Search" />
-    </form>
-<p><b>*The 🔥 symbol means I made it</b></p>
-
-    <script>
-      function searchWebsite() {
-        var website = document.getElementById("website").value;
-        var searchQuery = document.getElementById("search").value;
-
-        if (website === "google") {
-          window.open("https://www.google.com/search?q=" + searchQuery);
-        } else if (website === "youtube") {
-          window.open(
-            "https://www.youtube.com/results?search_query=" + searchQuery
-          );
-          
-        } else if (website === "wikipedia") {
-          window.open("https://en.wikipedia.org/wiki/" + searchQuery);
-          
-        } else if (website === "music") {
-          window.open("https://beatbump.io/search/" + searchQuery);
-        } else if (website === "canvas") {
-          window.open("https://canvas.houstonisd.org/");
-        } else if (website === "chatgpt") {
-          window.open("https://chat.openai.com/");
-        } else if (website === "help") {
-          window.open("https://pv4stl.csb.app/");
-        } else if (website === "google translate") {
-          window.open("https://translate.google.com/");
-        } else if (website === "fire writer") {
-          window.open("https://sc22r5.csb.app/");
-        } else if (website === "fire calculator") {
-          window.open("https://prcq7n.csb.app/");
-        } else if (website === "nitro type") {
-          window.open("https://www.nitrotype.com/garage");
-        } else if (website === "games") {
-          window.open("https://55gms.net/");
-        } else if (website === "capcut") {
-          window.open("https://www.capcut.com/my-edit?start_tab=video");
-        } else if (website === "coding") {
-          window.open("https://github.com/");
-          } else if (website === "espn") {
-          window.open("https://www.espn.com/");
-          } else if (website === "weekly quiz") {
-          window.open("https://7fxjy4.csb.app/");
-          } else if (website === "firetexttospeech") {
-          window.open("https://fireaitalker.netlify.app/");
-          } else if (website === "fire says") {
-          window.open("https://firesays.netlify.app/");
-          } else if (website === "fire wall game") {
-          window.open("https://firewallgame.netlify.app/");
-          } else if (website === "fire translate") {
-          window.open("https://firetranslate.netlify.app/");
-
+        document.addEventListener("DOMContentLoaded", function () {
             // Simulate a delay to showcase the loading animation
             setTimeout(function () {
                 // Remove the loading container and display the content
@@ -246,7 +224,7 @@
                 document.body.style.overflow = "auto"; // Enable scrolling
                 document.body.style.display = "block"; // Display the main content
             }, 2000); // Adjust the delay time as needed
-        }
+        });
     </script>
 </body>
 </html>
